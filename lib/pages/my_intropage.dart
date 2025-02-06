@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nexed/Colors/app_colors.dart';
+import 'package:nexed/pages/my_loginpage.dart';
 
 class MyIntropage extends StatelessWidget {
   const MyIntropage({super.key});
+
+  void ontap(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const MyLoginpage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +22,7 @@ class MyIntropage extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey[800],
+                backgroundColor: AppColors.secondary,
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -47,20 +53,20 @@ class MyIntropage extends StatelessWidget {
                   color: Colors.white),
             ),
             const SizedBox(height: 5),
-            const Text(
+            Text(
               "Start by choosing your role.",
-              style: TextStyle(fontSize: 16, color: Colors.grey),
+              style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 30),
             _buildRoleCard(
-              icon: Icons.school,
+              //image: Image.asset("lib/Assets/images/student.png"),
               title: "I'm a Student",
               subtitle: "I want to get help and guidance from expert teachers",
-              onTap: () {},
+              onTap: () => ontap(context),
             ),
             const SizedBox(height: 20),
             _buildRoleCard(
-              icon: Icons.science,
+              // image: Image.asset("lib/Assets/images/tie.png"),
               title: "I'm a Teacher",
               subtitle: "I want to share my knowledge with the community",
               onTap: () {},
@@ -71,26 +77,27 @@ class MyIntropage extends StatelessWidget {
     );
   }
 
-  Widget _buildRoleCard(
-      {required IconData icon,
-      required String title,
-      required String subtitle,
-      required VoidCallback onTap}) {
+  Widget _buildRoleCard({
+    //required Image image,
+    required String title,
+    required String subtitle,
+    required VoidCallback onTap,
+  }) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
         decoration: BoxDecoration(
-          color: Colors.grey[900],
+          color: AppColors.secondary,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
           children: [
-            Icon(
-              icon,
-              size: 40,
-              color: Colors.white,
-            ),
+            // Image.asset("$image",
+            //   height: 35,
+            //   width: 48,
+            //   color: Colors.white,
+            // ),
             const SizedBox(width: 15),
             Expanded(
               child: Column(
