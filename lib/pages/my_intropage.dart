@@ -32,11 +32,12 @@ class MyIntropage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 8,
           children: [
             Image.asset(
-              "lib/Assets/ne.png",
-              height: 30,
-              width: 30,
+              "lib/Assets/images/ne.png",
+              height: 58,
+              width: 58,
             ),
             const Text(
               "Get Started",
@@ -78,14 +79,18 @@ class MyIntropage extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         decoration: BoxDecoration(
           color: Colors.grey[900],
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
           children: [
-            Icon(icon, size: 40, color: Colors.white),
+            Icon(
+              icon,
+              size: 40,
+              color: Colors.white,
+            ),
             const SizedBox(width: 15),
             Expanded(
               child: Column(
