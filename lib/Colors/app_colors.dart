@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class AppColors {
   static final primary = Color.fromRGBO(12, 13, 20, 1);
   static final secondary = Color.fromRGBO(32, 32, 40, 1);
-
   static final grey = Color.fromRGBO(213, 212, 212, 1);
   static final ashGray = Color.fromRGBO(129, 128, 126, 1);
   static final vibrantBlue = Color.fromRGBO(38, 83, 241, 1);

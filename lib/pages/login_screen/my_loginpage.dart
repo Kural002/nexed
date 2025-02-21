@@ -132,7 +132,7 @@ class _MyLoginpageState extends State<MyLoginpage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
-                onPressed: () => context.go('/home'),
+                onPressed: () => context.go('/nav'),
                 child: Text(
                   "Log In",
                   style: TextStyle(
