@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.fromLTRB(15,2,15,5),
               child: Text(
                 label,
                 textAlign: TextAlign.center,
